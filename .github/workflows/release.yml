@@ -7,6 +7,11 @@ on:
 
 jobs:
   release:
+    permissions:
+      # permission to create a new release
+      contents: write
+      # permission to upload to GitHub Packages
+      packages: write
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
